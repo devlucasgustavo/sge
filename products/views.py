@@ -73,7 +73,7 @@ class ProductDeleteView(LoginRequiredMixin, PermissionRequiredMixin, DeleteView)
     permission_required = 'products.delete_product'
 
 
-class ProductCreateListAPIVIew(generics.ListCreateAPIView):
+class ProductCreateListAPIView(generics.ListCreateAPIView):
     queryset = models.Product.objects.all()
     serializer_class = serializers.ProductSerializer()
 
